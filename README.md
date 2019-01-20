@@ -6,4 +6,4 @@ You can start with [installation guide](Sources)
 ## Table of contents
 1.  [Installation guide (complete installation with libraries and base teams)](Sources)
 1.  [Installation guide (complete installation with libraries and base teams)](Sources)
-2.  [Test scripts for automated test](Test scripts)
+2.  [Test scripts for automated test](Test)
