@@ -1,0 +1,52 @@
+#################################################
+10/08/2009 by PET Eng Comp (www.inf.ufes.br/~pet):
+- Fixed a bug in tackle
+- Fixed a bug when it is run on Ubuntu 9.04
+
+#################################################
+07/22/2009 by PET Eng Comp (www.inf.ufes.br/~pet):
+- Fixed small bug in stamina capacity
+- Removed unused variable in function moveToPos2
+
+#################################################
+Updated to version 13 by PET Eng Comp (www.inf.ufes.br/~pet):
+- Changed default version of the coach - mainCoach.cpp
+- Changed default version of the player - main.cpp
+- Changed general parameters - ServerSettings.cpp
+- Added new general parameters and their functions set and get - ServerSettings.cpp / ServerSettings.h
+- Substituted function call getMaxPower() by getMaxDashPower() and getMinPower() by getMinDashPower(), when it was refering to dash - WorldModelHighLevel.cpp / WordModel.cpp / BasicPlayer.cpp / SoccerTypes.cpp / WordlModelPredict.cpp
+- Updated the reading of "sense_body" messages in order to read stamina capacity
+- Updated the reading of "see" messages in order to read command kick
+- Updated functions related with dash in order to use the new parameter angle - SoccerTypes.h / SoccerTypes.cpp
+- Added function getCycleLastTackle(Object o) that returns the cycle of the last tackle of the player - Objects.h / Objects.cpp / WorldModel.cpp / WorldModel.h / WorldModelUpdate.cpp
+- Added function setCycleAgentLastTackle() and used in function tackle.- Objects.h / Objects.cpp / WorldModel.cpp / WorldModel.h / WorldModelUpdate.cpp
+- Added function TurnSideToPoint() and moveToPos2 in order to make the new dash command, with the direction parameter. The other functions that make dash commands were changed to pass the direction zero as the direction parameter, that makes a forward dash.
+- Changed Stamina class in order to added the information about the "capacity"
+- Changed functions dashToPoin(), makeDashCommand() and SoccerCommand::SoccerCommand() in order to make the new dash command 
+
+#################################################
+General Changes by PET EngComp
+- Fixed warnings and errors when compiling in g++ 4.0 or above (put const char* instead of char* in some functions and included some libraries) - ActHandler.h .cpp / GenericValues.h .cpp / Logger .h Logger.cpp / Player.cpp / SenseHandler.h .cpp / SoccerTypes.h .cpp / WorldModel.h .cpp / WorldModelUpdate.cpp
+
+
+#################################################
+Updated to version 12 by PET Eng Comp (www.inf.ufes.br/~pet):
+
+- Changed default version of the coach - mainCoach.cpp
+- Changed default version of the player - main.cpp
+- Changed general parameters - ServerSettings.cpp
+- Changed the types of the players substituted, avoiding the same type - BasicCoach.cpp
+- Updated function tackle - BasicPlayer.h / BasicPlayer.cpp
+- Updated number of heterogeneous players - SoccerTypes.h (number of heterogeneous players and commandT sync_see)
+- Updated general parameters - ServerSettings.cpp / ServerSettings.h
+- Added new general parameters and their functions set and get - ServerSettings.cpp / ServerSettings.h
+- Added command (and function) sync_see - SoccerTypes.h / SoccerTypes.cpp / BasicPlayer.cpp / BasicPlayer.h
+- Added function getPlayerVersion() - BasicPLayer.cpp / BasicPlayer.h / Player.cpp
+- Added function about collision (received in sense_body string sent by server) in WordModelUpdate /  WorldModel.h / WorldModel.cpp
+     - getCycleLastCollisionPlayer() / getCycleLastCollisionBall
+
+--- We did NOT changed / added:
+    - server::max_monitors (default value: -1): did not added
+    - server::synch_see_offset (default value: 30) : did not added
+#################################################
+18-08-2003 Changed to automake/autoconf
