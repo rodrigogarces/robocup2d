@@ -31,6 +31,7 @@ cd ../fedit2
 export QT_SELECT=4
 qmake fedit2.pro
 make
+alias fedit2="$PWD/bin/fedit2"
 
 cd $home
 cd ../base_teams
