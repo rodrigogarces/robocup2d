@@ -32,7 +32,7 @@ cd ../fedit2
 export QT_SELECT=4
 qmake fedit2.pro
 sudo make -j $cores
-sudo echo 'alias fedit2="$PWD/bin/fedit2"' >> ~/.bashrc
+sudo echo "alias fedit2='$PWD/bin/fedit2'" >> ~/.bashrc
 
 cd $home
 cd ../base_teams
