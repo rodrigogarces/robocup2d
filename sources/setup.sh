@@ -23,7 +23,7 @@ cd $home
 echo "Installing librcsc"
 cd librcsc-4.1.0
 sudo ./configure
-make -j $cores
+sudo make -j $cores
 sudo make install
 
 cd $home
@@ -31,7 +31,7 @@ echo "Installing fedit2"
 cd ../fedit2
 export QT_SELECT=4
 qmake fedit2.pro
-make -j $cores
+sudo make -j $cores
 alias fedit2="$PWD/bin/fedit2"
 
 cd $home
@@ -40,13 +40,13 @@ home=$PWD #Store base_teams as current directory
 echo "Installing agent2d"
 cd agent2d-3.1.1/
 sudo ./configure
-make -j $cores
+sudo make -j $cores
 
 cd $home
 echo "Installing UvA Trilearn"
 cd trilearn_base_sources-3.3-v13-by_PET
 sudo ./configure
-make -j $cores
+sudo make -j $cores
 
 echo "Installation complete"
 echo "Open a new terminal instance or reload terminal (source ~/.bashrc) to apply changes"
